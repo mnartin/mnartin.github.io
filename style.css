@@ -1,0 +1,129 @@
+*{
+    background-color: cadetblue;
+    font-family: sans-serif;
+}
+#whoAmI{
+    font-weight: 100;
+    color: #edea5c;
+}
+table{
+    font-family: sans-serif;
+    text-align: center;
+}
+table.center{
+    margin-left: auto;
+    margin-right: auto;
+}
+table tr td{
+    padding-left:20px;
+    padding-right: 20px;
+    display: inline-block;
+}
+.omMig{
+    padding-top: 10px;
+    padding-left: 30px;
+}
+#omMig{
+    font-weight: 300;
+    color: rgb(250, 139, 135);
+}
+.center{
+    color: #fff5a1;
+    font-size: large;
+    font-weight: 100;
+    text-shadow: 1px -1px 4px rgba(150, 150, 150, 1);
+}
+
+.startPics{
+    overflow: hidden;
+    width: 100px;
+    height: 500px;
+}
+.startPics p{
+    background-color: transparent;
+}
+#synth{
+    background-image: url("sss.jpg");
+    background-position: center;
+    background-size: cover;
+    background-color: coral;
+    width: 50px;
+    -webkit-box-shadow: inset -33px 0px 22px -22px rgba(70,71,71,0.5);
+    -moz-box-shadow: inset -33px 0px 22px -22px rgba(70,71,71,0.5);
+    box-shadow: inset -33px 0px 22px -22px rgba(70,71,71,0.5);
+}
+#ubiq{
+    background-image: url("ubi.png");
+    background-size: cover;
+    background-position: center;
+    background-color: darkorange;
+    width: 50px;
+    -webkit-box-shadow: inset -33px 0px 22px -22px rgba(70,71,71,0.5);
+    -moz-box-shadow: inset -33px 0px 22px -22px rgba(70,71,71,0.5);
+    box-shadow: inset -33px 0px 22px -22px rgba(70,71,71,0.5);
+}
+#park{
+    background-image: url("gardencity.png");
+    background-size: 500%
+    background-repeat:no-repeat;
+    background-position: center;
+    width: 50px;
+    -webkit-box-shadow: inset -33px 0px 22px -22px rgba(70,71,71,0.5);
+    -moz-box-shadow: inset -33px 0px 22px -22px rgba(70,71,71,0.5);
+    box-shadow: inset -33px 0px 22px -22px rgba(70,71,71,0.5);
+}
+#ortho{
+    background-image: url("orthotrans.png");
+    background-size: cover;
+    width: 50px;
+    -webkit-box-shadow: inset -33px 0px 22px -22px rgba(70,71,71,0.5);
+    -moz-box-shadow: inset -33px 0px 22px -22px rgba(70,71,71,0.5);
+    box-shadow: inset -33px 0px 22px -22px rgba(70,71,71,0.5);
+}
+#spacerace{
+    background-image: url("spacePic.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 50px;
+    -webkit-box-shadow: inset -33px 0px 22px -22px rgba(70,71,71,0.5);
+    -moz-box-shadow: inset -33px 0px 22px -22px rgba(70,71,71,0.5);
+    box-shadow: inset -33px 0px 22px -22px rgba(70,71,71,0.5);
+}
+#work{
+    background-image: url("idea.JPG");
+    background-size: cover;
+    background-position: center;
+    width: 50px;
+}
+#contact{
+    text-align: center;
+}
+#contact a{
+    text-decoration: none;
+}
+#contact a h4{
+    font-weight: 100;
+}
+#contact a h4:hover{
+    color: cornflowerblue;
+    font-weight: 400;
+}
+#contactInfo {
+    font-weight: 100;
+    color: #edea5c;
+    /*color: cornflowerblue;*/
+    text-align: center;
+    padding-top: 20%;
+}
+#contactInfo a{
+    text-decoration: none;
+    color: #edea5c;
+    /*color: cornflowerblue;*/
+}
+#back{
+    font-size: small;
+}
+#moreabout{
+    width: 50px;
+    overflow: scroll;
+}
