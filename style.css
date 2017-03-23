@@ -1,10 +1,17 @@
 *{
-    background-color: cadetblue;
+    /*background-color: azure;*/
+
     font-family: sans-serif;
+
+}
+body{
+    background-image: url("background3.png");
+    background-size: contain;
+    background-repeat: repeat;
 }
 #whoAmI{
     font-weight: 100;
-    color: #edea5c;
+    color: #5272ed;
 }
 table{
     font-family: sans-serif;
@@ -36,17 +43,25 @@ table tr td{
 
 .startPics{
     overflow: hidden;
+    opacity: 0.9;
     width: 100px;
     height: 500px;
 }
 .startPics p{
     background-color: transparent;
 }
+.startPics a{
+    color: #fff5a1;
+    text-decoration: none;
+    text-shadow: 1px -1px 4px rgba(150, 150, 150, 1);
+
+}
 #synth{
     background-image: url("sss.jpg");
     background-position: center;
     background-size: cover;
     background-color: coral;
+
     width: 50px;
     -webkit-box-shadow: inset -33px 0px 22px -22px rgba(70,71,71,0.5);
     -moz-box-shadow: inset -33px 0px 22px -22px rgba(70,71,71,0.5);
@@ -109,6 +124,7 @@ table tr td{
     font-weight: 400;
 }
 #contactInfo {
+    text-shadow: 1px -1px 1px rgba(150, 150, 150, 1);
     font-weight: 100;
     color: #edea5c;
     /*color: cornflowerblue;*/
@@ -119,6 +135,8 @@ table tr td{
     text-decoration: none;
     color: #edea5c;
     /*color: cornflowerblue;*/
+    text-shadow: 1px -1px 4px rgba(150, 150, 150, 1);
+
 }
 #back{
     font-size: small;
