@@ -30,10 +30,19 @@ table tr td{
     padding-top: 10px;
     padding-left: 30px;
 }
-#omMig{
+#omMig {
+    background-color: rgba(255, 199, 152, 0.6);
+    display: inline-block;
+    margin-left: 40px;
+    padding: 5px;
     font-weight: 300;
     color: rgb(250, 139, 135);
+    -webkit-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+    -o-transform: skew(-20deg);
+
 }
+
 .center{
     color: #fff5a1;
     font-size: large;
