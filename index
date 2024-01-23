@@ -12,7 +12,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background-image: url('path/to/your/background-image.jpg');
+      background-image: url('/smg.jpg');
       background-size: cover;
     }
 
