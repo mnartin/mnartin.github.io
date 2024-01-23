@@ -3,39 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="icon" href="fac@2x" type="image/x-icon">
   <title>Your Page Title</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-image: url('/smg.jpg');
-      background-size: cover;
-    }
-
-    #logo-container {
-      text-align: center;
-    }
-
-    #instagram-link {
-      color: #fff; /* Change the color as needed */
-      text-decoration: none;
-      font-size: 18px; /* Adjust the font size as needed */
-    }
-  </style>
 </head>
 <body>
-  <div id="logo-container">
-    <!-- Replace 'path/to/your/logo.svg' with the actual path to your SVG logo -->
-    <svg width="100" height="100">
-      <image xlink:href="path/to/your/logo.svg" width="100%" height="100%" />
-    </svg>
-  </div>
+  <div class="background-image">
+    <div id="logo-container">
+      <!-- Replace 'path/to/your/logo.svg' with the actual path to your SVG logo -->
+      <svg width="100" height="100">
+        <image xlink:href="/MP.svg" width="100%" height="100%" />
+      </svg>
+    </div>
 
-  <!-- Replace 'https://www.instagram.com/your_instagram_username/' with your Instagram profile link -->
-  <a id="instagram-link" href="https://www.instagram.com/your_instagram_username/" target="_blank" rel="noopener noreferrer">Follow us on Instagram</a>
+    <!-- Replace 'https://www.instagram.com/your_instagram_username/' with your Instagram profile link -->
+    <a id="instagram-link" href="https://www.instagram.com/your_instagram_username/" target="_blank" rel="noopener noreferrer">
+      <img src="instagram-icon.png" alt="Instagram Icon">
+    </a>
+  </div>
 </body>
 </html>
