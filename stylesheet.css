@@ -31,6 +31,7 @@ body, html {
 }
 
 #instagram-link img {
-  width: 50px; /* Adjust the size of the Instagram icon as needed */
-  height: 50px;
+  width: 32px; /* Adjust the size of the Instagram icon as needed */
+  height: 32px;
+
 }
