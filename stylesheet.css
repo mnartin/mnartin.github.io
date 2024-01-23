@@ -10,6 +10,7 @@ body, html {
   height: 100vh;
   background-image: url('smg.jpg'); /* Replace with your actual background image */
   background-size: cover;
+  background-position: center center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,7 +22,10 @@ body, html {
 }
 
 #instagram-link {
-  margin-top: auto; /* Adjust the margin as needed */
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 20px; /* Adjust the margin as needed */
+  text-align: center;
   display: inline-block;
   text-decoration: none;
 }
