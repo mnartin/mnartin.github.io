@@ -21,7 +21,7 @@ body, html {
 }
 
 #instagram-link {
-  margin-top: 20px; /* Adjust the margin as needed */
+  margin-top: auto; /* Adjust the margin as needed */
   display: inline-block;
   text-decoration: none;
 }
