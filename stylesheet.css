@@ -1,3 +1,5 @@
+/* styles.css */
+
 body, html {
   margin: 0;
   padding: 0;
@@ -6,7 +8,7 @@ body, html {
 
 .background-image {
   height: 100vh;
-  background-image: url('smg.jpg');
+  background-image: url('smg.jpg'); /* Replace with your actual background image */
   background-size: cover;
   display: flex;
   flex-direction: column;
