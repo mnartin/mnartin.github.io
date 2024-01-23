@@ -1,0 +1,30 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.background-image {
+  height: 100vh;
+  background-image: url('path/to/your/background-image.jpg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#logo-container {
+  text-align: center;
+}
+
+#instagram-link {
+  margin-top: 20px; /* Adjust the margin as needed */
+  display: inline-block;
+  text-decoration: none;
+}
+
+#instagram-link img {
+  width: 50px; /* Adjust the size of the Instagram icon as needed */
+  height: 50px;
+}
