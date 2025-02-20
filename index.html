@@ -5,11 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="stylesheet.css">
   <link rel="icon" href="fav.png" type="image/x-icon">
-    <!-- Set the status bar color -->
+  
+  <!-- Set the status bar color -->
   <meta name="apple-mobile-web-app-status-bar-style" content="#90BEEF">
   <!-- Set the theme color for the browser -->
   <meta name="theme-color" content="#90BEEF">
+  
   <title>missömmar produktion</title>
+  
+  <!-- Include jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Include jQuery Ripples Plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.6.3/jquery.ripples.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      function isWebGLAvailable() {
+        try {
+          var canvas = document.createElement('canvas');
+          return !!(window.WebGLRenderingContext && 
+                    (canvas.getContext('webgl') || canvas.getContext('experimental-webgl')));
+        } catch (e) {
+          return false;
+        }
+      }
+
+      if (isWebGLAvailable()) {
+        $('.background-image').ripples({
+          resolution: 512,
+          dropRadius: 20, // Radius of the ripple drop
+          perturbance: 0.04, // Adjusts the intensity of the ripples
+          interactive: true // Ensures touch interaction works
+        });
+      } else {
+        console.warn('WebGL not supported: Ripple effect disabled.');
+      }
+    });
+  </script>
 </head>
 <body>
   <div class="background-image">
@@ -19,26 +51,9 @@
       </svg>
     </div>
 
-    
-    <a id="instagram-link" href="https://www.instagram.com/missommar.produktion/" target="_blank" rel="instagrom">
+    <a id="instagram-link" href="https://www.instagram.com/missommar.produktion/" target="_blank">
       <img src="igb.svg" alt="Instagram Icon Link">
     </a>
   </div>
-
-  <!-- Include jQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<!-- Include jQuery Ripples Plugin -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.6.3/jquery.ripples.min.js"></script>
-
-  <script>
-  $(document).ready(function() {
-    $('body').ripples({
-      resolution: 512,
-      dropRadius: 20, // Radius of the ripple drop
-      perturbance: 0.04, // Adjusts the intensity of the ripples
-    });
-  });
-</script>
-
 </body>
 </html>
