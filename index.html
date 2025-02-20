@@ -15,34 +15,25 @@
   <meta name="description" content="Missömmar Produktion ger form, skapar design, film - Stockholm to Dalarna.. Låt vårt kreativa arbete ta fart tillsammans." />
   
   <!-- Include jQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- Include jQuery Ripples Plugin -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.6.3/jquery.ripples.min.js"></script>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      function isWebGLAvailable() {
-        try {
-          var canvas = document.createElement('canvas');
-          return !!(window.WebGLRenderingContext && 
-                    (canvas.getContext('webgl') || canvas.getContext('experimental-webgl')));
-        } catch (e) {
-          return false;
-        }
-      }
 
-      if (isWebGLAvailable()) {
-        $('.background-image').ripples({
-          resolution: 512,
-          dropRadius: 20, // Radius of the ripple drop
-          perturbance: 0.04, // Adjusts the intensity of the ripples
-          interactive: true // Ensures touch interaction works
-        });
-      } else {
-        console.warn('WebGL not supported: Ripple effect disabled.');
-      }
-    });
-  </script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if ($.fn.ripples) { // Check if plugin is loaded
+      $(".background-image").ripples({
+        resolution: 256,
+        dropRadius: 30, // Ripple size
+        perturbance: 0.05, // Wave intensity
+        interactive: true
+      });
+    } else {
+      console.warn("Ripples plugin not loaded");
+    }
+  });
+</script>
     <!-- JSON-LD Structured Data for SEO -->
   <script type="application/ld+json">
   {
