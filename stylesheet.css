@@ -11,6 +11,8 @@ body, html {
 
 .background-image {
   flex: 1;
+	  width: 100vw;
+  height: 100vh;
   background-image: url('smg.webp'); /* Replace with your actual background image */
   background-size: cover;
   background-position: 55% 0%; /* Center the background image */
