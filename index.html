@@ -24,5 +24,21 @@
       <img src="igb.svg" alt="Instagram Icon Link">
     </a>
   </div>
+
+  <!-- Include jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Include jQuery Ripples Plugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.6.3/jquery.ripples.min.js"></script>
+
+  <script>
+  $(document).ready(function() {
+    $('body').ripples({
+      resolution: 512,
+      dropRadius: 20, // Radius of the ripple drop
+      perturbance: 0.04, // Adjusts the intensity of the ripples
+    });
+  });
+</script>
+
 </body>
 </html>
