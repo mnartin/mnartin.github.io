@@ -24,9 +24,9 @@
   $(document).ready(function () {
     if ($.fn.ripples) { // Check if the plugin is loaded
       $(".background-image").ripples({
-        resolution: 2048,
-        dropRadius: 2, // Ripple size
-        perturbance: 0.1, // Wave intensity
+        resolution: 512,
+        dropRadius: 10, // Ripple size
+        perturbance: 0.00001, // Wave intensity
         interactive: true
       });
     } else {
