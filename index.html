@@ -17,12 +17,12 @@
   <!-- Include jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- Include jQuery Ripples Plugin -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.6.3/jquery.ripples.min.js"></script>
+  <script src="https://unpkg.com/jquery.ripples@0.6.3/dist/jquery.ripples-min.js"></script>
 
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    if ($.fn.ripples) { // Check if plugin is loaded
+  $(document).ready(function () {
+    if ($.fn.ripples) { // Check if the plugin is loaded
       $(".background-image").ripples({
         resolution: 256,
         dropRadius: 30, // Ripple size
@@ -34,6 +34,8 @@
     }
   });
 </script>
+
+
     <!-- JSON-LD Structured Data for SEO -->
   <script type="application/ld+json">
   {
