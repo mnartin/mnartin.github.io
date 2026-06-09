@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Midsommar 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;700&family=Fanwood+Text:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-login">
+  <div class="login-bg"></div>
+
+  <!-- Botanical overlay reused from welcome page -->
+  <img class="login-botanical" src="images/botanical-overlay.svg" alt="" aria-hidden="true">
+
+  <div class="login-container">
+    <h1 class="login-title">missömmar<br>2026 inlogg</h1>
+    <form id="loginForm" class="login-form">
+      <div class="login-input-wrap">
+        <input
+          type="password"
+          id="passwordInput"
+          placeholder="ange lösenord"
+          autocomplete="current-password"
+          class="login-input"
+        >
+        <button type="submit" class="login-submit-btn">→</button>
+      </div>
+      <p id="loginError" class="login-error hidden">fel lösenord — försök igen</p>
+    </form>
+  </div>
+  <script src="js/auth.js"></script>
+</body>
+</html>
