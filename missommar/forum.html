@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forum – Midsommar 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;700&family=Fanwood+Text:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-forum">
+
+  <!-- SVG heat-warp filter -->
+  <svg aria-hidden="true" style="position:absolute;pointer-events:none;width:0;height:0;overflow:hidden">
+    <defs>
+      <filter id="heat-warp" x="-8%" y="-8%" width="116%" height="116%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.013 0.008" numOctaves="3" seed="42" result="noise">
+          <animate attributeName="baseFrequency"
+                   values="0.013 0.008;0.023 0.015;0.008 0.005;0.019 0.011;0.013 0.008"
+                   dur="22s" repeatCount="indefinite"/>
+        </feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="20" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+    </defs>
+  </svg>
+
+  <div class="welcome-page">
+
+    <!-- Hero -->
+    <div class="hero-wrapper">
+      <div class="hero-slideshow" id="heroSlideshow"></div>
+      <div class="hero-tint"></div>
+      <div class="hero-inner-frame"></div>
+      <div class="hero-prism"></div>
+      <div class="hero-scanlines"></div>
+      <canvas class="hero-grain" id="heroGrain"></canvas>
+    </div>
+
+    <!-- Botanical overlay -->
+    <img class="botanical-overlay" src="images/botanical-overlay.svg" alt="" aria-hidden="true">
+
+    <!-- Content area -->
+    <div class="content-area">
+      <div class="content-panel">
+
+        <nav class="panel-nav">
+          <a href="welcome.html" class="panel-nav-link">Info</a>
+          <a href="food.html" class="panel-nav-link">Mat &amp; tobak</a>
+          <a href="forum.html" class="panel-nav-link active">Forum</a>
+          <a href="#" class="panel-nav-link panel-nav-logout" id="logoutBtn">Logga ut</a>
+        </nav>
+
+        <!-- New topic form -->
+        <div class="forum-new-topic">
+          <input type="text" id="topicAuthor" placeholder="ditt namn" autocomplete="off">
+          <input type="text" id="topicTitle" placeholder="nytt ämne..." autocomplete="off">
+          <button id="topicSubmit">+</button>
+        </div>
+
+        <!-- Topics list -->
+        <div class="forum-list" id="forumList"></div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+  <script src="js/firebase-config.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/welcome.js"></script>
+  <script src="js/forum.js"></script>
+</body>
+</html>
