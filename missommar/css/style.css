@@ -1,11 +1,9 @@
 /* ============================================================
-   FONTS – Lägg Fakir-fontfiler i /fonts/ (Fakir.woff2, Fakir.woff, Fakir.ttf)
+   FONTS
    ============================================================ */
 @font-face {
-  font-family: 'Fakir';
-  src: url('../fonts/Fakir.woff2') format('woff2'),
-       url('../fonts/Fakir.woff') format('woff'),
-       url('../fonts/Fakir.ttf') format('truetype');
+  font-family: 'Luminari';
+  src: url('../Luminari.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -19,6 +17,7 @@
   --font-body:    'Cormorant Garamond', Georgia, serif;
   --font-figma:   'Familjen Grotesk', sans-serif;
   --font-fanwood: 'Fanwood Text', Georgia, serif;
+  --font-luminari: 'Luminari', 'Fanwood Text', Georgia, serif;
 
   --green-dark:   #1f3824;
   --green-mid:    #3a6b3e;
@@ -89,7 +88,7 @@ button  { cursor: pointer; font-family: inherit; }
   box-shadow: 0 2px 20px rgba(242,52,64,.25);
 }
 .page-food .nav-link {
-  font-family: var(--font-fanwood);
+  font-family: var(--font-luminari);
   font-size: clamp(1rem, 1.6vw, 1.3rem);
   font-style: italic;
   color: rgba(255,255,255,.65);
@@ -147,7 +146,7 @@ button  { cursor: pointer; font-family: inherit; }
 
 /* Title: "missömmar\n2026 inlogg" */
 .login-title {
-  font-family: var(--font-fanwood);
+  font-family: var(--font-luminari);
   font-size: clamp(3rem, 8vw, 5.5rem);
   font-weight: 400;
   font-style: italic;
@@ -171,7 +170,7 @@ button  { cursor: pointer; font-family: inherit; }
   border-radius: 0;
   outline: none;
   color: rgba(255,255,255,.8);
-  font-family: var(--font-fanwood);
+  font-family: var(--font-luminari);
   font-size: clamp(1.4rem, 3vw, 2.2rem);
   font-style: italic;
   font-weight: 400;
@@ -193,7 +192,7 @@ button  { cursor: pointer; font-family: inherit; }
 
 .login-error {
   color: rgba(255,255,255,.85);
-  font-family: var(--font-fanwood);
+  font-family: var(--font-luminari);
   font-style: italic;
   font-size: 1rem;
   margin-top: 1rem;
@@ -381,18 +380,35 @@ button  { cursor: pointer; font-family: inherit; }
   margin-bottom: clamp(2rem, 3.33vw, 64px);
 }
 .panel-nav-link {
-  font-family: var(--font-fanwood);
+  font-family: var(--font-luminari);
   font-size: clamp(1.1rem, 2.08vw, 40px);
   font-weight: 400;
-  color: rgba(255,255,255,0.7);
+  color: rgba(255,255,255,0.6);
   text-decoration: none;
-  padding-bottom: 4px;
-  border-bottom: 2px solid transparent;
-  transition: color 0.2s, border-color 0.2s;
+  position: relative;
+  padding-bottom: 6px;
+  transition: color 0.2s;
 }
-.panel-nav-link:hover          { color: #ffffff; }
-.panel-nav-link.active         { color: #ffffff; border-bottom-color: #ffffff; }
-.panel-nav-logout              { font-size: clamp(0.75rem, 1vw, 18px); opacity: 0.5; }
+.panel-nav-link:hover { color: rgba(255,255,255,0.9); }
+.panel-nav-link.active { color: #ffffff; }
+
+/* Black pill indicator under active link */
+.panel-nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 24px; height: 4px;
+  background: #1A0A0A;
+  border-radius: 2px;
+}
+
+.panel-nav-logout {
+  font-family: var(--font-luminari);
+  font-size: clamp(1.1rem, 2.08vw, 40px);
+  font-weight: 400;
+  opacity: 0.45;
+}
 
 /* Text sections inside the panel */
 .welcome-section {
@@ -447,30 +463,30 @@ button  { cursor: pointer; font-family: inherit; }
 }
 .day-comment-btn {
   background: none; border: none;
-  color: rgba(255,255,255,.35);
-  font-size: .8rem;
+  color: rgba(255,255,255,.8);
+  font-size: 1.05rem;
   letter-spacing: .03em;
   display: flex; align-items: center; gap: .2rem;
-  transition: color .2s;
+  transition: color .2s, transform .2s;
   cursor: pointer;
   padding: .15rem .4rem;
   border-radius: 4px;
 }
-.day-comment-btn:hover { color: rgba(255,255,255,.8); background: rgba(255,255,255,.08); }
+.day-comment-btn:hover { color: #fff; transform: scale(1.2); background: rgba(255,255,255,.08); }
 .day-comment-count { font-family: var(--font-figma); font-size: .75rem; }
 
 /* Comment toggle on card */
 .comment-toggle-btn {
   background: none; border: none;
-  color: rgba(255,255,255,.3);
-  font-size: .8rem;
+  color: rgba(255,255,255,.8);
+  font-size: 1.05rem;
   padding: .2rem .3rem;
   border-radius: 4px;
-  transition: color .2s, background .2s;
+  transition: color .2s, transform .2s, background .2s;
   cursor: pointer;
   line-height: 1;
 }
-.comment-toggle-btn:hover { color: rgba(255,255,255,.8); background: rgba(255,255,255,.08); }
+.comment-toggle-btn:hover { color: #fff; transform: scale(1.2); background: rgba(255,255,255,.08); }
 .comment-count { font-family: var(--font-figma); font-size: .72rem; }
 
 /* Comment section */
@@ -517,7 +533,7 @@ button  { cursor: pointer; font-family: inherit; }
   flex-shrink: 0;
 }
 .comment-text {
-  font-family: var(--font-fanwood);
+  font-family: var(--font-luminari);
   font-style: italic;
   color: rgba(255,255,255,.85);
   flex: 1;
@@ -559,7 +575,7 @@ button  { cursor: pointer; font-family: inherit; }
   border: 1px solid rgba(255,255,255,.2);
   border-radius: 5px;
   padding: .4rem .7rem;
-  font-family: var(--font-fanwood);
+  font-family: var(--font-luminari);
   font-style: italic;
   font-size: .9rem;
   color: #fff;
@@ -589,10 +605,11 @@ button  { cursor: pointer; font-family: inherit; }
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  align-items: stretch;
 }
 
 .meal-card {
-  flex: 1 1 300px;
+  flex: 1 1 200px;
   max-width: 520px;
   background: rgba(255,255,255,.13);
   border: 1px solid rgba(255,255,255,.2);
@@ -601,6 +618,8 @@ button  { cursor: pointer; font-family: inherit; }
   transition: background .2s;
   overflow: visible;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 .meal-card:hover { background: rgba(255,255,255,.2); }
 
@@ -624,7 +643,7 @@ button  { cursor: pointer; font-family: inherit; }
   border-bottom: 2px solid rgba(255,255,255,.6);
   outline: none;
   color: #fff;
-  font-family: var(--font-fanwood);
+  font-family: var(--font-luminari);
   font-size: clamp(1.5rem, 3vw, 2rem);
   font-style: italic;
   width: 100%;
@@ -640,7 +659,7 @@ button  { cursor: pointer; font-family: inherit; }
 }
 .edit-title-btn:hover { color: rgba(255,255,255,.85); transform: scale(1.2); }
 .meal-title {
-  font-family: var(--font-fanwood);
+  font-family: var(--font-luminari);
   font-size: clamp(1.6rem, 3.5vw, 2.3rem);
   font-weight: 400;
   font-style: italic;
@@ -732,7 +751,7 @@ button  { cursor: pointer; font-family: inherit; }
   margin-bottom: 1.6rem;
 }
 .modal-header h3 {
-  font-family: var(--font-fanwood);
+  font-family: var(--font-luminari);
   font-size: 1.7rem; font-weight: 400;
   font-style: italic;
   color: #1A1A1A;
@@ -788,7 +807,7 @@ button  { cursor: pointer; font-family: inherit; }
   gap: 0;
   padding: .55rem 0;
   border-bottom: 1px solid rgba(255,255,255,.12);
-  font-family: var(--font-fanwood);
+  font-family: var(--font-luminari);
   font-size: 1.05rem;
   color: rgba(255,255,255,.92);
 }
