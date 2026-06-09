@@ -163,6 +163,7 @@ button  { cursor: pointer; font-family: inherit; }
 .login-input-wrap {
   display: flex;
   justify-content: center;
+  align-items: stretch;
 }
 .login-input {
   background: #CC081A;
@@ -178,7 +179,7 @@ button  { cursor: pointer; font-family: inherit; }
   text-align: center;
   letter-spacing: .02em;
   padding: 1rem 1.75rem;
-  min-width: 280px;
+  min-width: 220px;
   transition: background .2s, color .2s;
   caret-color: rgba(255,255,255,.7);
 }
@@ -188,6 +189,18 @@ button  { cursor: pointer; font-family: inherit; }
 .login-input:focus {
   background: #ae0617;
   color: #ffffff;
+}
+.login-submit-btn {
+  background: #ae0617;
+  border: none;
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 0 1.25rem;
+  cursor: pointer;
+  transition: background .2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .login-error {
