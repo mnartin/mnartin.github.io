@@ -106,7 +106,7 @@ button  { cursor: pointer; font-family: inherit; }
 }
 
 /* ============================================================
-   LOGIN PAGE – FEDERANT MINIMAL PORTAL
+   LOGIN PAGE â€“ FEDERANT MINIMAL PORTAL
    ============================================================ */
 .page-login {
   min-height: 100vh;
@@ -122,7 +122,7 @@ button  { cursor: pointer; font-family: inherit; }
   background: #F23440;
 }
 
-/* Botanical overlay — same SVG as welcome page, full-page */
+/* Botanical overlay â€” same SVG as welcome page, full-page */
 .login-botanical {
   position: fixed;
   inset: 0;
@@ -144,7 +144,7 @@ button  { cursor: pointer; font-family: inherit; }
   gap: 2.5rem;
 }
 
-/* Title: "missömmar\n2026 inlogg" */
+/* Title: "missÃ¶mmar\n2026 inlogg" */
 .login-title {
   font-family: var(--font-luminari);
   font-size: clamp(3rem, 8vw, 5.5rem);
@@ -212,11 +212,11 @@ button  { cursor: pointer; font-family: inherit; }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Hide floating nav on welcome page — navigation is inside the content panel */
+/* Hide floating nav on welcome page â€” navigation is inside the content panel */
 .page-welcome .main-nav { display: none; }
 
 /* ============================================================
-   WELCOME PAGE – FIGMA DESIGN (Familjen Grotesk, botanical vectors)
+   WELCOME PAGE â€“ FIGMA DESIGN (Familjen Grotesk, botanical vectors)
    ============================================================ */
 .page-welcome { background: #F23440; }
 
@@ -282,7 +282,7 @@ button  { cursor: pointer; font-family: inherit; }
   to   { opacity: .52; }
 }
 
-/* Conic prism overlay — continuously rotates its hue */
+/* Conic prism overlay â€” continuously rotates its hue */
 .hero-prism {
   position: absolute; inset: 0;
   background: conic-gradient(
@@ -369,7 +369,7 @@ button  { cursor: pointer; font-family: inherit; }
   overflow: hidden;
 }
 
-/* Panel navigation (Figma "links" frame — Fanwood Text, centered at top of panel) */
+/* Panel navigation (Figma "links" frame â€” Fanwood Text, centered at top of panel) */
 .panel-nav {
   display: flex;
   justify-content: center;
@@ -438,7 +438,7 @@ button  { cursor: pointer; font-family: inherit; }
 .welcome-text a:hover   { opacity: 0.75; }
 
 /* ============================================================
-   FOOD PAGE – shares hero/panel layout with welcome page
+   FOOD PAGE â€“ shares hero/panel layout with welcome page
    ============================================================ */
 .page-food { background: #F23440; }
 
@@ -614,7 +614,7 @@ button  { cursor: pointer; font-family: inherit; }
 
 .meal-card {
   flex: 1 1 auto;
-  min-width: min-content;
+  min-width: 0;
   max-width: 520px;
   background: rgba(255,255,255,.13);
   border: 1px solid rgba(255,255,255,.2);
@@ -625,6 +625,7 @@ button  { cursor: pointer; font-family: inherit; }
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 .meal-card:hover { background: rgba(255,255,255,.2); }
 
@@ -635,6 +636,7 @@ button  { cursor: pointer; font-family: inherit; }
   gap: .75rem;
   margin-bottom: .85rem;
   white-space: nowrap;
+  min-width: 0;
 }
 .meal-header-actions {
   display: flex;
@@ -671,6 +673,11 @@ button  { cursor: pointer; font-family: inherit; }
   font-style: italic;
   color: #ffffff;
   line-height: 1.1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+  flex: 1 1 auto;
 }
 .meal-meta {
   font-family: var(--font-figma);
@@ -727,7 +734,7 @@ button  { cursor: pointer; font-family: inherit; }
 }
 
 /* ============================================================
-   MODAL — WARM
+   MODAL â€” WARM
    ============================================================ */
 .modal-overlay {
   position: fixed; inset: 0; z-index: 1000;
@@ -805,7 +812,7 @@ button  { cursor: pointer; font-family: inherit; }
 .modal-form button:hover { background: #c4202c; }
 
 /* ============================================================
-   MENU ITEMS — restaurant style
+   MENU ITEMS â€” restaurant style
    ============================================================ */
 .menu-item {
   display: flex;
@@ -839,7 +846,7 @@ button  { cursor: pointer; font-family: inherit; }
   letter-spacing: .05em;
 }
 .menu-leaders::after {
-  content: '· · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·';
+  content: 'Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Â·';
   white-space: nowrap;
 }
 .menu-cook {
@@ -988,4 +995,7 @@ button  { cursor: pointer; font-family: inherit; }
   .meal-card      { flex: 1 1 100%; max-width: 100%; padding: 1rem 1.25rem; }
   .meal-title     { font-size: 1.5rem; }
   .food-header h1 { font-size: 2.4rem; }
+  .panel-nav-link,
+  .panel-nav-logout { font-size: 1.1rem; }
+  .panel-nav      { gap: 1rem; }
 }
